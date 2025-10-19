@@ -29,3 +29,7 @@ Encoder and Decoder:
 App implementation:
 - Finally took the original FastVLM model output text and fed through the crafted model.
 - Not directly using the output token embeddings of the FastVLM model because the two models use different embeddings for the tokens, also the tokenization scheme might not exactly be the same. Hence manually tokenized the FastVLM output text, mapped to embeddings and then did forward pass.
+
+## Future Ideas
+- Use [sarvam-translate](https://www.sarvam.ai/blogs/sarvam-translate) and reduce size using quantization, as this model has multiple Indian languages as translation destination from English. Need to test conversion quality after quantization though.
+- Since the encoder of any translation model needs the full generated English text to be present before the first translated token can be generated, pipelining the architecture is a challenge currently. So, training a model afresh for captioning in Indian languages is a future scope.
