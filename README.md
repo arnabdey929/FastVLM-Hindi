@@ -1,6 +1,6 @@
 # FastVLM-Hindi
 
-![Example Image 1](App Running Images/IMG_2198.JPG)
+![Example Image 1](App\ Running\ Images/IMG_2198.JPG)
 
 ## This project extends [Apple's FastVLM](https://github.com/apple/ml-fastvlm) vision-language model by converting the naive English output to Hindi using a small quantized English-to-Hindi translator language model.
 
