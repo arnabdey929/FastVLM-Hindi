@@ -1,9 +1,12 @@
 # FastVLM-Hindi
-## This project extends ![Apple's FastVLM](https://github.com/apple/ml-fastvlm) vision-language model by converting the naive English output to Hindi using a small quantized English-to-Hindi translator language model.
+
+![Example Image 1](App Running Images/IMG_2198.JPG)
+
+## This project extends [Apple's FastVLM](https://github.com/apple/ml-fastvlm) vision-language model by converting the naive English output to Hindi using a small quantized English-to-Hindi translator language model.
 
 The FastVLM model uses a vision encoder and a transformer based language model to caption images live taken on iPhone/Macbook camera. It does a forward pass using the on-device neural engine architecture. The language model used provides captions in English. 
 
-In this project I used an English-to-Hindi translation small language model ![oput-mt-en-hi](https://huggingface.co/Helsinki-NLP/opus-mt-en-hi), which is small enough to do a forward pass on an iPhone while giving excellent translation results.
+In this project I used an English-to-Hindi translation small language model [oput-mt-en-hi](https://huggingface.co/Helsinki-NLP/opus-mt-en-hi), which is small enough to do a forward pass on an iPhone while giving excellent translation results.
 
 Since the opus-mt-en-hi model uses its own tokenizer and transformer architecture, the tokenizer, encoder, and the decoder had to be separately quantized and converted to coreML models.
 
